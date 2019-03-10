@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## dot modulefile
+##
+## modulefiles/dot.  Generated from dot.in by configure.
+##
+proc ModulesHelp { } {
+	global toolsversion
+
+	puts stderr "\tAdds `.' to your PATH environment variable"
+	puts stderr "\n\tThis makes it easy to add the current working directory"
+	puts stderr "\tto your PATH environment variable.  This allows you to"
+	puts stderr "\trun executables in your current working directory"
+	puts stderr "\twithout prepending ./ to the excutable name"
+	puts stderr "\n\tVersion $toolsversion\n"
+}
+
+module-whatis	"adds `.' to your PATH environment variable"
+
+# for Tcl script use only
+set	toolsversion	1.0.0
+
+append-path	PATH	~/tools
+
