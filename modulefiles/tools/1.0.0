@@ -1,8 +1,8 @@
 #%Module1.0#####################################################################
 ##
-## dot modulefile
+## tools modulefile
 ##
-## modulefiles/dot.  Generated from dot.in by configure.
+## modulefiles/tools.
 ##
 proc ModulesHelp { } {
 	global toolsversion
