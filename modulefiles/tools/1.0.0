@@ -7,15 +7,14 @@
 proc ModulesHelp { } {
 	global toolsversion
 
-	puts stderr "\tAdds `.' to your PATH environment variable"
-	puts stderr "\n\tThis makes it easy to add the current working directory"
-	puts stderr "\tto your PATH environment variable.  This allows you to"
-	puts stderr "\trun executables in your current working directory"
-	puts stderr "\twithout prepending ./ to the excutable name"
+	puts stderr "\tAdds '/home/\$USER/tools' to your PATH environment variable"
+	puts stderr "\n\tThis allows you to run exexutables located in"
+	puts stderr "\t'/home/\$USER/tools'"
+        puts stderr "\ttwithout prepending the complete path"
 	puts stderr "\n\tVersion $toolsversion\n"
 }
 
-module-whatis	"adds `.' to your PATH environment variable"
+module-whatis	"adds '/home/\$USER/tools' to your PATH environment variable"
 
 # for Tcl script use only
 set	toolsversion	1.0.0
