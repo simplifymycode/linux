@@ -1,0 +1,53 @@
+
+echo $MODULEPATH
+
+
+module list
+
+
+mkdir /home/$USER/modulefiles
+
+
+module use /home/$USER/modulefiles
+
+
+module avail
+
+
+mkdir /home/$USER/modulefiles/tools
+
+
+cat > /home/$USER/modulefiles/tools/1.0.0
+#%Module1.0#####################################################################
+##
+## tools modulefile
+##
+## modulefiles/tools.
+##
+proc ModulesHelp { } {
+        global toolsversion
+
+        puts stderr "\tAdds '/home/\$USER/tools' to your PATH environment
+        variable"
+        puts stderr "\n\tThis allows you to run exexutables located in"
+        puts stderr "\t'/home/\$USER/tools'"
+        puts stderr "\ttwithout prepending the complete path"
+        puts stderr "\n\tVersion $toolsversion\n"
+}
+
+module-whatis   "adds '/home/\$USER/tools' to your PATH environment variable"
+
+# for Tcl script use only
+set     toolsversion    1.0.0
+
+append-path     PATH    ~/tools
+
+^D
+
+
+module help tools
+
+
+module whatis tools
+
+
